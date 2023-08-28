@@ -6,8 +6,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="dark:bg-white dark:text-light">
     <!-- Navbar start -->
     <nav class="flex justify-between px-16 py-8">
       <div class="flex justify-between gap-4">
@@ -51,23 +57,20 @@
     <!-- Banner Start -->
     <div class="h-screen">
       <div class="grid grid-cols-3 gap-8 absolute py-16 px-16">
-        <div class="flex flex-col col-span-2 max-md:col-span-3 gap-4 pr-12">
+        <div class="flex flex-col col-span-2 max-md:col-span-3 gap-2 pr-12">
           <div class="text-6xl font-bold">Hi</div>
           <div class="text-4xl font-semibold">I'm Lustiyana</div>
-          <div class="h-2 bg-black rounded-full"></div>
-          <div>
-            I’m a final year student of Informatics. I also learn about Python
-            programming and have multiple ability in Web Programming like HTML5,
-            CSS3, Javascript, and PHP and some framework like Bootstrap,
-            TailwindCSS and React JS (Next JS).
-          </div>
-          <button
-            class="bg-slate-600 w-52 rounded-xl py-2 text-white shadow-md hover:bg-slate-800 duration-500"
+          <p>Front-end Web Developer</p>
+          <div class="h-2 bg-black rounded-full mb-4"></div>
+          <a
+            href="mailto:lustiyana1801@gmail.com"
+            class="bg-slate-600 w-52 rounded-xl py-2 text-white shadow-md hover:bg-slate-800 duration-500 text-center flex justify-center gap-4"
           >
-            Let's Talk
-          </button>
+            <div>Let's Talk</div>
+            <img class="w-4" src="/assets/images/icons/send.svg" alt="" />
+          </a>
         </div>
-        <div class="">
+        <div>
           <img src="assets/images/ilustrasi.svg" alt="" class="max-md:hidden" />
         </div>
       </div>
@@ -85,21 +88,20 @@
         />
       </div>
       <div class="md:col-span-2 flex flex-col gap-4" id="about">
-        <div class="font-bold text-4xl text-center">Hi, nice to meet you</div>
+        <div class="font-bold text-4xl text-center text-slate-900">
+          Hi, nice to meet you
+        </div>
         <div class="h-1 bg-yellow-500"></div>
-        <div class="col-span-2 text-white leading-8 text-center">
-          I’m a final year student of Informatics. I also learn about Python
-          programming and have multiple ability in Web Programming like HTML5,
-          CSS3, Javascript, and PHP and some framework like Bootstrap,
-          TailwindCSS and React JS (Next JS). I have target to graduate in 2023.
-          I also have the ability to operate Microsoft Office like Ms. Word, Ms.
-          Excel, Power Point, and Ms. Access (Including Google Sheets and Google
-          Docs) I have skills in public speaking and able to work with team. I
-          have critical thinking and some experience in terms of brainstorming.
+        <div class="col-span-2 text-white leading-8 text-justify">
+          I'm a frontend web developer experienced in creating dynamic web apps
+          using Next.js and crafting polished user interfaces with Tailwind CSS.
+          I'm also skilled in React Native for mobile app development. I have a
+          solid background in deploying web apps on Ubuntu VPS instances with
+          Nginx.
         </div>
         <div class="flex justify-center">
           <button
-            class="w-52 bg-white py-2 rounded-xl shadow-md hover:text-white hover:bg-slate-300 duration-500 font-semibold"
+            class="w-52 bg-white py-2 rounded-xl shadow-md hover:text-white hover:bg-slate-400 duration-500 font-semibold"
           >
             Download CV
           </button>
@@ -110,28 +112,28 @@
         class="m-auto shadow-lg rounded-md w-3/4 absolute -bottom-48 left-1/2 transform max-md:translate-y-1/2 -translate-x-1/2 bg-white py-8"
       >
         <div class="font-bold text-4xl text-center mb-8 text-slate-700">
-          Spesializing in
+          Specializing in
         </div>
         <div class="flex max-md:flex-col justify-center gap-8">
           <div class="flex flex-col items-center">
             <img src="assets/images/web.png" alt="" class="m-auto" />
             <div class="font-semibold text-slate-600">Web Development</div>
             <div class="w-32 text-xs text-center">
-              Deskripsi tentang pekerjaan sebagai web development
+              Using Next.js and Tailwindcss
             </div>
           </div>
           <div class="flex flex-col items-center">
             <img src="assets/images/ml.png" alt="" class="m-auto" />
             <div class="font-semibold text-slate-600">Machine Learning</div>
             <div class="w-32 text-xs text-center">
-              Deskripsi tentang pekerjaan sebagai web development
+              Using python and tensorflow
             </div>
           </div>
           <div class="flex flex-col items-center">
             <img src="assets/images/qa.png" alt="" class="m-auto" />
             <div class="font-semibold text-slate-600">Quality Assurance</div>
             <div class="w-32 text-xs text-center">
-              Deskripsi tentang pekerjaan sebagai web development
+              Manual testing and using katalon
             </div>
           </div>
         </div>
@@ -268,17 +270,26 @@
     </div>
     <!-- Portofolio End -->
     <!-- Work Start -->
-    <div class="bg-slate-400 py-8 px-16">
-      <div class="text-4xl font-bold text-slate-600 text-center">
+    <div class="bg-slate-100 py-8 px-16">
+      <div class="text-4xl font-bold text-slate-600 text-center mb-8">
         Work Experience
+      </div>
+      <div class="flex items-center justify-center gap-12">
+        <div class="">
+          <img class="w-52" src="/assets/images/gf-logo.png" alt="" />
+        </div>
+        <div>
+          <img class="w-52" src="/assets/images/pendis-kemenag.png" alt="" />
+        </div>
       </div>
     </div>
     <!-- Work End -->
     <!-- Footer Start -->
     <div class="p-12 text-center border-t border-black">
-      Copyright © 2021 Lustiyana. All Rights Reserved.
+      Copyright © 2023 Lustiyana. All Rights Reserved.
     </div>
     <!-- Footer End -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"
@@ -287,6 +298,10 @@
       nomodule
       src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script/navbar.js"></script>
   </body>
 </html>
