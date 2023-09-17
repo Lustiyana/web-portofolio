@@ -3,19 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/styles/style.css" />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    /> -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="dark:bg-white dark:text-light">
     <!-- Navbar start -->
-    <nav class="flex justify-between px-16 py-8">
+    <nav class="flex justify-between sm:px-16 px-8 py-8 sm:py-8">
       <div class="flex justify-between gap-4">
         <span class="cursor-pointer md:hidden text-3xl"
           ><ion-icon name="menu" onclick="Menu(this)"></ion-icon
@@ -56,10 +49,10 @@
     <!-- Navbar end -->
     <!-- Banner Start -->
     <div class="h-screen">
-      <div class="grid grid-cols-3 gap-8 absolute py-16 px-16">
-        <div class="flex flex-col col-span-2 max-md:col-span-3 gap-2 pr-12">
-          <div class="text-6xl font-bold">Hi</div>
-          <div class="text-4xl font-semibold">I'm Lustiyana</div>
+      <div class="grid grid-cols-3 gap-8 absolute sm:py-16 sm:px-16 px-8 py-8">
+        <div class="col-span-2 max-md:col-span-3 gap-2 pr-12">
+          <div class="text-6xl font-bold mb-2">Hi</div>
+          <div class="text-4xl font-semibold mb-8">I'm Lustiyana</div>
           <p>Front-end Web Developer</p>
           <div class="h-2 bg-black rounded-full mb-4"></div>
           <a
@@ -78,21 +71,19 @@
     <!-- Banner End -->
     <!-- About start -->
     <div
-      class="h-3/4 bg-slate-600 md:grid md:grid-cols-3 px-16 py-24 items-center relative"
+      class="h-3/4 bg-slate-600 md:grid md:grid-cols-3 sm:px-16 px-8 py-24 items-center relative"
     >
       <div class="h-64 w-64 mb-8 rounded-full border-2 overflow-hidden m-auto">
-        <img
-          src="assets/images/photo-diri.png"
-          alt="Gambar"
-          class="h-full w-full object-cover"
-        />
+        <img src="assets/images/new.jpg" alt="Gambar" class="object-cover" />
       </div>
       <div class="md:col-span-2 flex flex-col gap-4" id="about">
         <div class="font-bold text-4xl text-center text-slate-900">
           Hi, nice to meet you
         </div>
         <div class="h-1 bg-yellow-500"></div>
-        <div class="col-span-2 text-white leading-8 text-justify">
+        <div
+          class="col-span-2 text-white leading-8 sm:text-justify text-center"
+        >
           I'm a frontend web developer experienced in creating dynamic web apps
           using Next.js and crafting polished user interfaces with Tailwind CSS.
           I'm also skilled in React Native for mobile app development. I have a
@@ -101,6 +92,7 @@
         </div>
         <div class="flex justify-center">
           <button
+            onclick="downloadPDF()"
             class="w-52 bg-white py-2 rounded-xl shadow-md hover:text-white hover:bg-slate-400 duration-500 font-semibold"
           >
             Download CV
@@ -111,7 +103,9 @@
       <div
         class="m-auto shadow-lg rounded-md w-3/4 absolute -bottom-48 left-1/2 transform max-md:translate-y-1/2 -translate-x-1/2 bg-white py-8"
       >
-        <div class="font-bold text-4xl text-center mb-8 text-slate-700">
+        <div
+          class="font-bold sm:text-4xl text-2xl text-center mb-8 text-slate-700"
+        >
           Specializing in
         </div>
         <div class="flex max-md:flex-col justify-center gap-8">
@@ -142,12 +136,12 @@
     </div>
     <!-- About end -->
     <div
-      class="md:grid md:grid-cols-4 bg-slate-300 pt-64 max-md:pt-[520px] pb-16 px-16 gap-8"
+      class="md:grid md:grid-cols-4 bg-slate-300 pt-64 max-md:pt-[520px] pb-16 sm:px-16 px-8 gap-8"
       id="services"
     >
       <!-- Tools start -->
       <div class="md:col-span-3 mb-8">
-        <div class="text-4xl mb-8 font-semibold text-center">
+        <div class="sm:text-4xl text-2xl mb-8 font-semibold text-center">
           What Can I Do For Your Needs?
         </div>
         <div class="max-md:flex max-md:justify-center max-md:items-center">
@@ -219,7 +213,7 @@
       <!-- Tools end -->
       <!-- Education start -->
       <div class="flex flex-col gap-2">
-        <div class="font-bold text-4xl text-center">Education</div>
+        <div class="font-bold sm:text-4xl text-2xl text-center">Education</div>
         <div class="h-1 bg-yellow-500 rounded-full"></div>
         <div class="flex justify-center">
           <div class="flex flex-col gap-4">
@@ -236,9 +230,9 @@
             </div>
             <div>
               <div class="font-semibold">UIN Sunan Gunung Djati</div>
-              <div>2019-Present</div>
+              <div>2019-2023</div>
               <div>Informatics Engineering</div>
-              <div>GPA: 3.81</div>
+              <div>GPA: 3.83</div>
             </div>
           </div>
         </div>
@@ -248,22 +242,66 @@
     <!-- Sertifikasi start -->
     <!-- Sertifikasi end -->
     <!-- Portofolio Start -->
-    <div class="p-16" id="portofolio">
+    <div class="sm:p-16 p-8" id="portofolio">
       <div class="text-center font-bold text-4xl mb-8">Portofolio</div>
-      <div class="md:grid md:grid-cols-2 flex flex-col gap-4 md:w-3/4 m-auto">
+      <div class="md:grid md:grid-cols-3 flex flex-col gap-4 md:w-3/4 m-auto">
         <div class="p-4 bg-white rounded-lg shadow-md">
           <img
             src="assets/images/trash.jpg"
             alt=""
-            class="rounded-md w-full h-64 object-cover object-center mb-2"
+            class="rounded-md border w-full sm:h-48 h-32 object-cover object-center mb-2"
           />
           <a
             class="font-semibold text-xl text-slate-700"
-            href="https://github.com/Lustiyana/ML_Capstone-Project"
+            href="/portofolio/trashFiltering.html"
             >Trash Classification</a
           >
-          <p class="text-gray-700">
-            Project based capstone for final exam in Bangkit Academy
+          <p class="text-gray-700 line-clamp-3 text-sm">
+            This project is intended to fulfill the final assignment of the BANG
+            program. In this project, I served as the project manager and
+            machine learning engineer. I was responsible for leading the project
+            and creating machine learning models capable of classifying waste.
+          </p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md">
+          <img
+            src="assets/images/MTCNN.png"
+            alt=""
+            class="rounded-md border w-full sm:h-48 h-32 object-cover object-center mb-2"
+          />
+          <a
+            class="font-semibold text-xl text-slate-700"
+            href="/portofolio/faceRecognition.html"
+            >Face Recognition</a
+          >
+          <p class="text-gray-700 line-clamp-3 text-sm">
+            This project is designed to fulfill the thesis assignment. It
+            combines Flask, Node.js, and Strapi using the JavaScript and Python
+            programming languages. The project applies Face Recognition to a
+            WhatsApp bot to facilitate the attendance process. The model
+            creation utilizes the Convolutional Neural Network algorithm.
+          </p>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-md">
+          <img
+            src="assets/images/pulsadong.png"
+            alt=""
+            class="rounded-md border w-full sm:h-48 h-32 object-cover object-center mb-2"
+          />
+          <a
+            class="font-semibold text-xl text-slate-700"
+            href="/portofolio/pulsadong.html"
+            >PulsaDong</a
+          >
+          <p class="text-gray-700 line-clamp-3 text-sm">
+            This is a project aimed at creating a website for ordering credits
+            and facilitating various payments. The website was developed using
+            Next.js, utilizing the TypeScript programming language, and
+            integrated with Tailwind CSS. In this project, my responsibility was
+            to implement the UI design from Figma for the home page, about us,
+            pricing, order tracking, and privacy policy sections. Additionally,
+            I designed and implemented a custom select feature for the product
+            purchase form.
           </p>
         </div>
       </div>
@@ -271,7 +309,9 @@
     <!-- Portofolio End -->
     <!-- Work Start -->
     <div class="bg-slate-100 py-8 px-16">
-      <div class="text-4xl font-bold text-slate-600 text-center mb-8">
+      <div
+        class="sm:text-4xl text-2xl font-bold text-slate-600 text-center mb-8"
+      >
         Work Experience
       </div>
       <div class="flex items-center justify-center gap-12">
@@ -285,7 +325,7 @@
     </div>
     <!-- Work End -->
     <!-- Footer Start -->
-    <div class="p-12 text-center border-t border-black">
+    <div class="sm:p-12 p-4 text-center border-t border-black max-sm:text-sm">
       Copyright © 2023 Lustiyana. All Rights Reserved.
     </div>
     <!-- Footer End -->
